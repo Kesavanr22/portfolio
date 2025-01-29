@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* GLOBAL CSS */
+
+p,
+h1,
+h2,
+h3,
+a {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.head {
+    text-align: center;
+    font-size: 16px;
+}
+
+.headSpan {
+    text-align: center;
+    padding: 4px;
+    background-color: #f5df4e;
+}
+
+/* HOME SECTION */
+
+.home {
+    background-color: #f5df4e;
+    margin: 0;
+    padding: 0;
+    /* width: 100vw; */
+    height: 94vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+/* Typography */
+.home h2 {
+    font-weight: 300;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0px;
+    text-align: center;
+}
+
+.home .text {
+    height: 80px;
+}
+
+.home p {
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.home .anchor {
+    padding-top: 40px;
+
+}
+
+.home .anchor a {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.home .anchor a:hover {
+    background-color: #6c757d;
+}
+
+/* Header Text */
+.home h1 {
+    font-weight: 600;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0px;
+
+}
+
+/* Circular Profile Image */
+.circular-portrait {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+.circular-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Down Arrow Animation */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.scroll-down .arrow {
+    margin-bottom: 120%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    transform: rotate(45deg);
+    animation: bounce 1.5s infinite;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    50% {
+        transform: translateY(10px) rotate(45deg);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .home {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .home h2 {
+        font-size: 45px;
+    }
+
+    .home h1 {
+        font-size: 50px;
+    }
+
+    .home p {
+        font-size: 18px;
+    }
+
+    .home a {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .circular-portrait {
+        width: 300px;
+        height: 300px;
+    }
+
+    .scroll-down .arrow {
+        width: 25px;
+        height: 25px;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home h2 {
+        font-size: 38px;
+    }
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+
+    .circular-portrait {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home a {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+
+    .scroll-down .arrow {
+        width: 20px;
+        height: 20px;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+}
+
+/* ABOUT ME */
+.aboutMe {
+    padding: 1% 0;
+}
+
+.aboutMe .header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* ABOUT ME SUMMAR CONTENT */
+
+.aboutMe .summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* gap: 200px; */
+}
+
+.aboutMe .summary .cont {
+    width: 50%;
+    color: #212529;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: oblique;
+    text-align: justify;
+    font-size: 21px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .aboutMe .summary .cont {
+        width: 90%;
+    }
+}
+
+.aboutMe .summary .cont p {
+    font-size: 32px;
+}
+
+.aboutMe .summary .cont p span {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3.1px;
+    text-decoration-color: #f5df4e;
+}
+
+/* ABOUT ME YEAR OF EXPERIENCE NUMBER */
+
+.summary .year {
+    position: relative;
+    left: 30%;
+}
+
+.summary .year .circule {
+    position: absolute;
+    z-index: -1;
+    top: 27px;
+    left: 15px;
+    height: 80px;
+    width: 80px;
+    background-color: #f5df4e;
+    border-radius: 200px;
+}
+
+.summary .year p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    margin: 0px;
+    text-align: justify;
+}
+
+/* ABOUT ME YEAR OF EXPERIENCE */
+
+.summary .exp p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin: 0px;
+    text-align: justify;
+}
+
+.summary .exp p span {
+    font-weight: 600;
+}
+
+/* ABOUT MY INFORMATION */
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+
+.info p,
+h3 {
+    margin: 0px;
+}
+
+.info p {
+    color: #6c757d;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info h3 {
+    color: #212529;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.info h3 a {
+    color: #212529;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info {
+        justify-content: normal;
+    }
+}
+
+/* WHAT I DO */
+
+.whatIDo {
+    padding: 1% 10%;
+    background-color: #f8f9fa;
+}
+
+.whatIDo .header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.whatIDo .whatIDoCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* RESUME */
+
+.resume {
+    padding: 1% 10%;
+}
+
+.resume .header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.resume .resumeCon {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+
+.resume .resumeCon h2 {
+    font-size: 28px;
+}
+
+.resume .resumeCon h3 {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.resume .resumeCon article h2 {
+    font-weight: 600;
+}
+
+.resume .resumeCon article .education {
+    border-left: 2px solid #f5df4e;
+    padding-left: 10px;
+}
+
+.resume .resumeCon article .education p {
+    color: #6c757d;
+}
+
+.resume .resumeCon article .education div hr {
+    opacity: .5;
+}
+
+.resume .skills .cvbtn {
+    display: flex;
+    justify-content: center;
+}
+
+.resume .skills .cvbtn button {
+    padding: .8rem 2.6rem;
+    background: none;
+    color: black;
+    border: 2px solid black;
+    transition: all .5s ease;
+}
+
+.resume .skills .cvbtn button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume {
+        width: 90%;
+    }
+}
+
+/* WORK */
+
+.work {
+    padding: 1% 10%;
+    background-color: #f8f9fa;
+}
+
+.work .header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.work .workCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* BLOGS */
+.blogs {
+    padding: 1% 10%;
+}
+
+.blogs .header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.blogs .blogsCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* FOOTER */
+
+/* FOOTER */
+footer {
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer Content Layout */
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: white;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Footer Titles */
+footer section article h3 {
+    text-decoration: underline;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Footer Links */
+footer section article span {
+    font-weight: bold;
+}
+
+footer section article a {
+    color: #f5df4e;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer section article a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Copyright Section */
+footer .copyrights {
+    color: #f5df4e;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    footer section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer section article {
+        margin-bottom: 15px;
+    }
+}
